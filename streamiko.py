@@ -23,10 +23,9 @@ async def get(request: Request):
 async def ws_handler(websocket: WebSocket):
     await websocket.accept()
 
-    
     content = """
-<div hx-swap-oob="beforeend:#content" class="accordion bg-dark" id="accordionExample">
-  <div class="accordion-item">
+<div hx-swap-oob="beforeend:#content" class="accordion bg-dark" id="accordionExample" hx-trigger="hide_spinner()">
+  <div class="accordion-item opacity-75">
     <h2 class="accordion-header" id="headingOne">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#{div_id}" data-bs-theme="dark" aria-expanded="true" aria-controls="{div_id}">
         {comm}
@@ -34,7 +33,7 @@ async def ws_handler(websocket: WebSocket):
     </h2>
     <div id="{div_id}" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-theme="dark" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>{result}</strong>
+        <p>{result}</p>
       </div>
     </div>
   </div>
