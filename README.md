@@ -1,7 +1,7 @@
 # streamiko
 
 #### summary
-A simple example of a netmiko command runner using htmx websockets
+A simple example of a netmiko command runner using htmx & websockets
 
 - Simple container deployment
 - Leverages websockets for near realtime comms to equipment
