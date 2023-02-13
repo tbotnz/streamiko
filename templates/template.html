@@ -14,11 +14,6 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
-
-            <!--<div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="resolve_oid" checked>
-                <label class="form-check-label text-light" for="flexSwitchCheckDefault">Resolve OIDs</label>
-            </div>-->
         <div hx-ws="connect:/ws">
             <form class="d-flex" hx-ws="send:submit">
                 
@@ -28,7 +23,6 @@
                     <button class="btn btn-outline-success">Stream</button>
 
                     <div hx-swap-oob="beforeend:#content">
-                        <p>{{ time }}: {{ message }}</p>
                     </div>
 
             </form>
