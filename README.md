@@ -1,0 +1,1 @@
+uvicorn streamiko:app --reload --port 9005 --host "0.0.0.0"
